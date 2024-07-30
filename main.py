@@ -10,6 +10,7 @@ from variables import (
     HEIGHT,
     TILE_SIZE,
     GRID_WIDTH,
+    GENERATED_CELLS,
     FPS,
 )
 from functions import generate_cells, adjust_grid, draw_grid
@@ -67,7 +68,7 @@ def main():
                     playing = False
                 if event.key == pygame.K_g:
                     count = 0
-                    positions = generate_cells(random.randrange(5, 10) * GRID_WIDTH)
+                    positions = generate_cells(GENERATED_CELLS)
 
         screen.fill(BACKGROUND)
         draw_grid(positions, screen)
